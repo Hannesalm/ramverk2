@@ -1,0 +1,33 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href="stylesheets/style.css")
+    link(rel='stylesheet', href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css")
+  body
+    html
+      body
+        html
+          body
+            nav(class="blue darken-1")
+              .nav-wrapper
+                a.brand-logo.center(href="#") Qloud
+                ul#nav-mobile.left.hide-on-med-and-down
+                  li
+                    a(href="/") Startsida
+                  li
+                    a(href="about") Om
+                  li
+                    a(href="report") Redovisning
+    div.container
+      block content
+
+    nav(class="footer blue")
+      .container
+      .footer-copyright
+        .container
+          | © 2017 Copyright Qloud
+          a.grey-text.text-lighten-4.right(href="https://github.com/Hannesalm/ramverk2") Mitt GitHub repo
+
+
+  script(src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js")
