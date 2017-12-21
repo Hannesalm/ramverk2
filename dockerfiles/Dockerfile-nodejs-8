@@ -1,0 +1,10 @@
+FROM node:8.9.3
+
+RUN mkdir -p /app
+WORKDIR /app
+
+COPY . .
+
+RUN npm start
+
+EXPOSE 8070

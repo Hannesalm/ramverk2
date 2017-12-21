@@ -1,0 +1,17 @@
+version: "2"
+services:
+  node_6:
+    build:
+      context: .
+      dockerfile: dockerfiles/Dockerfile-nodejs-6
+
+    ports:
+      - 3006:8070
+
+  node_8:
+      build:
+        context: .
+        dockerfile: dockerfiles/Dockerfile-nodejs-8
+
+      ports:
+        - 3008:8070

@@ -3,7 +3,9 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "node ./bin/www",
+    "node1": "docker-compose run node_6 -d",
+    "node2": "docker-compose run node_8 -d"
   },
   "dependencies": {
     "body-parser": "~1.18.2",
