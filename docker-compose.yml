@@ -6,7 +6,7 @@ services:
       dockerfile: dockerfiles/Dockerfile-nodejs-6
 
     ports:
-      - 3006:8070
+      - "0.0.0.0:3006:8070"
 
   node_8:
       build:
@@ -14,4 +14,12 @@ services:
         dockerfile: dockerfiles/Dockerfile-nodejs-8
 
       ports:
-        - 3008:8070
+        - "0.0.0.0:3008:8070"
+
+  node_9:
+        build:
+          context: .
+          dockerfile: dockerfiles/Dockerfile-nodejs-9
+
+        ports:
+          - "0.0.0.0:3009:8070"

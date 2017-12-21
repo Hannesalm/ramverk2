@@ -5,6 +5,4 @@ WORKDIR /app
 
 COPY . .
 
-RUN npm start
-
-EXPOSE 8070
+CMD npm start
