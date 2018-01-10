@@ -6,7 +6,8 @@
     "start": "node ./bin/www",
     "node1": "docker-compose up node_6 -d",
     "node2": "docker-compose up node_8 -d",
-    "node3": "docker-compose up node_9 -d"
+    "node3": "docker-compose up node_9 -d",
+    "test": "nyc --all --reporter=html --reporter=text mocha --reporter=dot test/**/*.js"
   },
   "dependencies": {
     "body-parser": "~1.18.2",
@@ -29,7 +30,7 @@
     "js-yaml": "^3.10.0",
     "jsonlint": "^1.6.2",
     "mocha": "^4.0.1",
-    "nyc": "^11.3.0",
+    "nyc": "^11.4.1",
     "stylelint": "^8.2.0",
     "uglify-es": "^3.1.10"
   }
