@@ -4,9 +4,9 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
-    "node1": "docker-compose up node_6 -d",
-    "node2": "docker-compose up node_8 -d",
-    "node3": "docker-compose up node_9 -d",
+    "test1": "docker-compose run node_6 npm test",
+    "test2": "docker-compose run node_8 npm test",
+    "test3": "docker-compose run node_9 npm test",
     "test": "nyc --all --reporter=html --reporter=text mocha-webpack --webpack-config webpack.config.js --require test/setup.js --reporter=dot test/**/*.spec.js"
   },
   "dependencies": {
