@@ -7,7 +7,7 @@
     "node1": "docker-compose up node_6 -d",
     "node2": "docker-compose up node_8 -d",
     "node3": "docker-compose up node_9 -d",
-    "test": "nyc --all --reporter=html --reporter=text mocha --reporter=dot test/**/*.js"
+    "test": "nyc --all --reporter=html --reporter=text mocha-webpack --webpack-config webpack.config.js --require test/setup.js --reporter=dot test/**/*.spec.js"
   },
   "dependencies": {
     "body-parser": "~1.18.2",
@@ -17,7 +17,8 @@
     "morgan": "~1.9.0",
     "pug": "2.0.0-beta11",
     "serve-favicon": "~2.4.5",
-    "vue": "^2.5.13"
+    "vue": "^2.5.13",
+    "vue-template-compiler": "^2.5.13"
   },
   "devDependencies": {
     "clean-css-cli": "^4.1.10",
@@ -26,15 +27,19 @@
     "eslint": "^4.11.0",
     "eslint-plugin-pug": "^1.1.1",
     "eslint-plugin-react": "^7.5.1",
+    "expect": "^22.1.0",
     "html-minifier": "^3.5.6",
     "htmlhint": "^0.9.13",
     "js-yaml": "^3.10.0",
+    "jsdom": "^11.5.1",
+    "jsdom-global": "^3.0.2",
     "jsonlint": "^1.6.2",
     "mocha": "^4.1.0",
     "mocha-webpack": "^1.0.1",
     "nyc": "^11.4.1",
     "stylelint": "^8.2.0",
     "uglify-es": "^3.1.10",
-    "vue-test-utils": "^1.0.0-beta.11"
+    "vue-test-utils": "^1.0.0-beta.11",
+    "webpack": "^3.10.0"
   }
 }
